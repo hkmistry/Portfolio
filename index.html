@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Mistry | Portfolio</title>
+    <meta name="description"
+        content="Harsh Mistry is an Integrated MSc.IT student and Full-Stack Developer specializing in building robust, high-performance web applications.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hkmistry.github.io/">
+    <meta property="og:title" content="Harsh Mistry | Full-Stack Developer Portfolio">
+    <meta property="og:description"
+        content="Integrated MSc.IT student and Full-Stack Developer specializing in modern web applications and intelligent software systems.">
+    <meta property="og:image" content="https://hkmistry.github.io/sargvision.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hkmistry.github.io/">
+    <meta property="twitter:title" content="Harsh Mistry | Full-Stack Developer Portfolio">
+    <meta property="twitter:description"
+        content="Integrated MSc.IT student and Full-Stack Developer specializing in modern web applications and intelligent software systems.">
+    <meta property="twitter:image" content="https://hkmistry.github.io/sargvision.png">
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="custom-cursor-outline" id="cursorOutline" aria-hidden="true"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">Mistry <span>Harsh</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="nav-item active" data-sec="home">Home</a></li>
+                <li><a href="#about" class="nav-item" data-sec="about">About</a></li>
+                <li><a href="#skills" class="nav-item" data-sec="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-item" data-sec="projects">Projects</a></li>
+                <li><a href="#experience" class="nav-item" data-sec="experience">Experience</a></li>
+                <li><a href="#personal" class="nav-item" data-sec="personal">Beyond Tech</a></li>
+                <li><a href="#contact" class="nav-item" data-sec="contact">Contact</a></li>
+            </ul>
+
+            <div class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Main Content Layout -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+
+                    <div class="hero-left">
+                        <div class="availability-badge reveal-item">
+                            <span class="badge-dot"></span>
+                            <span>Available for Collaboration & Internships</span>
+                        </div>
+                        <h1 class="hero-title reveal-item">
+                            Building Digital Solutions <br>with <span>Purpose.</span>
+                        </h1>
+                        <p class="hero-desc reveal-item">
+                            Integrated MSc.IT student passionate about building software, designing data-driven systems, and exploring emerging technologies. Focused on creating reliable, maintainable, and user-centered digital solutions through thoughtful engineering and continuous improvement.
+                        </p>
+
+                        <div class="cta-group reveal-item">
+                            <a href="Harsh_Mistry_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                                <span>Download CV</span>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                            <a href="#projects" class="btn-secondary">
+                                <span>View Projects</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="social-links-wrapper reveal-item">
+                            <div class="social-links">
+                                <a href="https://github.com/hkmistry" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/harsh-mistry-a0329a30b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon" aria-label="LinkedIn"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://www.instagram.com/artloverharsh?igsh=bXp5Y2h5dGUxbnk2" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon" aria-label="Instagram"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-right reveal-item">
+                        <div class="hexagon-wrapper">
+                            <div class="hexagon-border">
+                                <div class="hexagon-inner">
+                                    <img src="pf_image.png" alt="Harsh Mistry Profile Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">Biography</span>
+                    <h2 class="section-title">Focused on clean system design and practical product engineering.</h2>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-image-column reveal-up">
+                        <div class="about-image-wrapper">
+                            <img src="about_image.png" alt="Harsh Mistry Presentation" loading="lazy">
+                            <div class="about-image-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="about-content-column reveal-up">
+                        <p class="about-text">
+                            I am a full-stack developer currently in the final phase of my Integrated MSc.IT degree at KS School of Business Management, Gujarat University. I focus on building things that live on the web—whether that's modeling SQL schemas, building RESTful APIs, or styling interactive user interfaces.
+                        </p>
+                        <p class="about-text">
+                            I have a strong curiosity for how software systems connect, from database constraints to browser rendering performance. I aim to write code that is clean, readable, and easy for teams to maintain.
+                        </p>
+                        <p class="about-text">
+                            Outside of programming, I spend my time sketching portraits, practicing classical Indian music (flute and harmonium), and following regular fitness routines. These interests help me maintain focus, creativity, and a healthy balance outside of technology.
+                        </p>
+
+                        <!-- Building Philosophy Card Grid -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">Clean Code</span>
+                                <span class="stat-label">Prioritizing Simplicity</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">Data Integrity</span>
+                                <span class="stat-label">Structured Relational Models</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">Performance First</span>
+                                <span class="stat-label">Optimized Asset Delivery</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">Disciplined Learning</span>
+                                <span class="stat-label">Continuous Iteration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Identity / Approach Section -->
+        <section id="approach" class="approach-section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">Methodology</span>
+                    <h2 class="section-title">How I Approach Development</h2>
+                </div>
+                <div class="approach-grid reveal-up">
+                    <div class="approach-card">
+                        <div class="approach-icon-wrapper"><i class="fa-solid fa-code-branch"></i></div>
+                        <h3 class="approach-heading">Code for Maintenance</h3>
+                        <p class="approach-desc">Write simple, readable, self-documenting code. I believe code is read far more often than it is written, so clarity is favored over clever hacks.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-icon-wrapper"><i class="fa-solid fa-database"></i></div>
+                        <h3 class="approach-heading">Data Integrity First</h3>
+                        <p class="approach-desc">Establish secure relational models and schema constraints. Relational integrity prevents bugs and secures data before it touches the client.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-icon-wrapper"><i class="fa-solid fa-gauge-high"></i></div>
+                        <h3 class="approach-heading">Performance Matters</h3>
+                        <p class="approach-desc">Optimize frontend rendering pipelines, manage asset footprints, and avoid heavy client computations to ensure fast user interaction.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-icon-wrapper"><i class="fa-solid fa-rotate"></i></div>
+                        <h3 class="approach-heading">Consistent Iteration</h3>
+                        <p class="approach-desc">Deploy a minimum working service, validate base assumptions, and build out features incrementally to reduce unexpected bugs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">TECHNOLOGIES</span>
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-desc">From intuitive user interfaces to scalable backend systems, these are the
+                        technologies I use to transform ideas into real-world applications.</p>
+                </div>
+
+                <div class="tech-ecosystem">
+
+                    <!-- Frontend Development Category -->
+                    <div class="tech-category reveal-up">
+                        <h3 class="tech-category-title">Frontend Development</h3>
+                        <div class="tech-chips-row">
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-html5 tech-icon" style="color: #E34F26;"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-css3-alt tech-icon" style="color: #1572B6;"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-js tech-icon" style="color: #F7DF1E;"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-react tech-icon" style="color: #61DAFB;"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <!-- Custom Next.js SVG -->
+                                <svg class="tech-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM15.626 15.626L11.536 10.372V15.626H10.158V8.37201H11.536L15.626 13.626V8.37201H17.004V15.626H15.626Z"
+                                        fill="#FFFFFF" />
+                                </svg>
+                                <span>Next.js</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-solid fa-mobile-screen-button tech-icon" style="color: #00E5FF;"></i>
+                                <span>Responsive Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Development Category -->
+                    <div class="tech-category reveal-up">
+                        <h3 class="tech-category-title">Backend Development</h3>
+                        <div class="tech-chips-row">
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-node-js tech-icon" style="color: #339933;"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-solid fa-bolt tech-icon" style="color: #F7DF1E;"></i>
+                                <span>Express.js</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-php tech-icon" style="color: #777BB4;"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-java tech-icon" style="color: #007396;"></i>
+                                <span>Core Java</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-python tech-icon" style="color: #3776AB;"></i>
+                                <span>Core Python</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-solid fa-gears tech-icon" style="color: #4DEEFF;"></i>
+                                <span>REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database Technologies Category -->
+                    <div class="tech-category reveal-up">
+                        <h3 class="tech-category-title">Database Technologies</h3>
+                        <div class="tech-chips-row">
+                            <div class="tech-card-chip">
+                                <i class="fa-solid fa-database tech-icon" style="color: #4479A1;"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-solid fa-leaf tech-icon" style="color: #47A248;"></i>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-solid fa-table tech-icon" style="color: #00E5FF;"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-solid fa-diagram-project tech-icon" style="color: #4DEEFF;"></i>
+                                <span>Database Design</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Development Tools Category -->
+                    <div class="tech-category reveal-up">
+                        <h3 class="tech-category-title">Development Tools</h3>
+                        <div class="tech-chips-row">
+                            <div class="tech-card-chip">
+                                <i class="fa-solid fa-code tech-icon" style="color: #007ACC;"></i>
+                                <span>VS Code</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-git-alt tech-icon" style="color: #F05032;"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-github tech-icon" style="color: #FFFFFF;"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="tech-card-chip">
+                                <i class="fa-brands fa-linux tech-icon" style="color: #FCC624;"></i>
+                                <span>Linux</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">Portfolio</span>
+                    <h2 class="section-title">Featured Work</h2>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project Card 1 -->
+                    <div class="project-case-card reveal-up">
+                        <div class="project-image-wrapper">
+                            <img src="sargvision.png" alt="SARGVISION Showcase" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Next.js</span>
+                                <span class="project-tag">TypeScript</span>
+                                <span class="project-tag">Framer Motion</span>
+                            </div>
+                            <h3 class="project-name">SARGVISION</h3>
+                            <div class="project-description">
+                                <p style="margin-bottom: 8px;"><strong>Vision:</strong> A conceptual system dashboard designed to model interactive network topology layouts and compute node allocations.</p>
+                                <p style="margin-bottom: 8px;"><strong>Current Implementation:</strong> A responsive client-side interface modeling system graphs and node deployment parameters.</p>
+                                <p style="margin-bottom: 8px;"><strong>Technical Execution:</strong> Next.js and Framer Motion coordinating responsive coordinate matrices at 60 FPS.</p>
+                                <p><strong>Future Direction:</strong> Integrate local agent services to stream real-time compute load averages via WebSockets.</p>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://sargvision-system.vercel.app/" target="_blank"
+                                    rel="noopener noreferrer" class="project-link primary-link"
+                                    aria-label="Live Demo for SARGVISION platform">
+                                    <span>Live Demo</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="https://github.com/hkmistry/sargvision-system.git" target="_blank"
+                                    rel="noopener noreferrer" class="project-link secondary-link"
+                                    aria-label="GitHub Source Code for SARGVISION platform">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-case-card reveal-up">
+                        <div class="project-image-wrapper">
+                            <img src="vsms.png" alt="Vehicle Care Showcase" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">React.js</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">Express.js</span>
+                                <span class="project-tag">MongoDB</span>
+                            </div>
+                            <h3 class="project-name">Vehicle Care</h3>
+                            <div class="project-description">
+                                <p style="margin-bottom: 8px;"><strong>Problem:</strong> Auto workshops face communication overhead, lack of billing transparency, and visual role confusion.</p>
+                                <p style="margin-bottom: 8px;"><strong>Solution:</strong> MERN portal providing role-based panels, secure JWT separation, live lifecycle tracking, and dynamic PDF compiles.</p>
+                                <p style="margin-bottom: 8px;"><strong>Technical Challenge:</strong> Synchronizing status flags across complex MongoDB model updates and compiling clean invoice assets on the backend.</p>
+                                <p><strong>Outcome:</strong> Working service platform mapping vehicle workflows from onboarding to final check-out.</p>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://vehicle-service-management-system-sand.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                    class="project-link primary-link"
+                                    aria-label="Live Demo for Vehicle Care service management system">
+                                    <span>Live Demo</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="https://github.com/hkmistry/Vehicle-Service-Management-System" target="_blank" rel="noopener noreferrer"
+                                    class="project-link secondary-link"
+                                    aria-label="GitHub Source Code for Vehicle Care service management system">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-case-card reveal-up">
+                        <div class="project-image-wrapper">
+                            <img src="object_detection.png"
+                                alt="AI Object Detection Workstation Showcase" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Flask</span>
+                                <span class="project-tag">YOLOv8</span>
+                                <span class="project-tag">OpenCV</span>
+                            </div>
+                            <h3 class="project-name">AI Object Detection Workstation</h3>
+                            <div class="project-description">
+                                <p style="margin-bottom: 8px;"><strong>Problem:</strong> Real-time web-based object detection suffers from high latency and heavy CPU usage during stream processing.</p>
+                                <p style="margin-bottom: 8px;"><strong>Solution:</strong> A Python & Flask dashboard running YOLOv8 for live webcam feeds, image profiling, and target search tracking.</p>
+                                <p style="margin-bottom: 8px;"><strong>Technical Challenge:</strong> Running PyTorch models on low-resource cloud hosting (Render) using frame-rate throttling and thread-safe queueing.</p>
+                                <p><strong>Outcome:</strong> A lightweight computer vision system processing frames smoothly without server crashes or connection timeouts.</p>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://object-detection-system-iqj0.onrender.com/" target="_blank" rel="noopener noreferrer"
+                                    class="project-link primary-link"
+                                    aria-label="Live Demo for AI Object Detection Workstation">
+                                    <span>Live Demo</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="https://github.com/hkmistry/Object_Detection_System" target="_blank" rel="noopener noreferrer"
+                                    class="project-link secondary-link"
+                                    aria-label="GitHub Source Code for AI Object Detection Workstation">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">Roadmap</span>
+                    <h2 class="section-title">Education & Timeline</h2>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot-wrapper">
+                            <span class="timeline-dot"></span>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2025 - 2027</span>
+                            <h3 class="timeline-role">MSc.IT Candidate</h3>
+                            <h4 class="timeline-org">KS School of Business Management, Gujarat University</h4>
+                            <p class="timeline-description">
+                                Advancing knowledge in enterprise application development, artificial intelligence, networking, system design, cloud technologies, and modern software development practices while working on full-stack and AI-driven projects in the final phase of the 5-year Integrated MSc.IT program.
+                            </p>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge">Artificial Intelligence</span>
+                                <span class="timeline-badge">Full-Stack Development</span>
+                                <span class="timeline-badge">System Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot-wrapper">
+                            <span class="timeline-dot"></span>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2022 - 2025</span>
+                            <h3 class="timeline-role">BSc.IT (Integrated MSc.IT Program)</h3>
+                            <h4 class="timeline-org">KS School of Business Management, Gujarat University</h4>
+                            <p class="timeline-description">
+                                Built a strong foundation in computer science and information technology through coursework in programming, data structures, database management systems, software engineering, networking, web technologies, operating systems, communication skills, and problem-solving methodologies as part of a 5-year Integrated MSc.IT program.
+                            </p>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge">Programming Fundamentals</span>
+                                <span class="timeline-badge">Data Structures</span>
+                                <span class="timeline-badge">Database Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Beyond Technology Section -->
+        <section id="personal" class="personal-section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">PERSONAL SIDE</span>
+                    <h2 class="section-title">Beyond Technology</h2>
+                    <p class="section-desc">A glimpse into the interests that shape my mindset, work ethic, and focus beyond writing&nbsp;code.</p>
+                </div>
+
+                <div class="personal-showcase">
+                    <!-- Card 01 -->
+                    <div class="showcase-item art-card reveal-up">
+                        <div class="showcase-header">
+                            <div class="personal-icon-wrapper art-wrapper">
+                                <i class="fa-solid fa-palette personal-icon" style="color: #00D2FF;"></i>
+                            </div>
+                            <div class="showcase-title-group">
+                                <h3 class="showcase-title">Art & Design</h3>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag tag-art">Sketches</span>
+                                    <span class="showcase-tag tag-art">Rangoli</span>
+                                    <span class="showcase-tag tag-art">Painting</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <p class="showcase-desc">I sketch portraits, practice painting, and create traditional rangoli designs. Sketching helps me relax, exercise spatial visualization, and maintain a sharp eye for visual details.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 02 -->
+                    <div class="showcase-item music-card reveal-up">
+                        <div class="showcase-header">
+                            <div class="personal-icon-wrapper music-wrapper">
+                                <i class="fa-solid fa-music personal-icon" style="color: #A855F7;"></i>
+                            </div>
+                            <div class="showcase-title-group">
+                                <h3 class="showcase-title">Music & Focus</h3>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag tag-music">Flute</span>
+                                    <span class="showcase-tag tag-music">Harmonium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <p class="showcase-desc">I play the classical Indian flute and harmonium. Practicing classical music is an exercise in focus, patient repetition, and structural precision.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 03 -->
+                    <div class="showcase-item sports-card reveal-up">
+                        <div class="showcase-header">
+                            <div class="personal-icon-wrapper sports-wrapper">
+                                <i class="fa-solid fa-dumbbell personal-icon" style="color: #10B981;"></i>
+                            </div>
+                            <div class="showcase-title-group">
+                                <h3 class="showcase-title">Discipline & Teamwork</h3>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag tag-sports">Workouts</span>
+                                    <span class="showcase-tag tag-sports">Team Sports</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <p class="showcase-desc">I follow a daily fitness routine and play recreational team sports. Keeping active helps maintain daily consistency, high energy, and a balanced lifestyle outside of technology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+
+                <div class="contact-grid">
+
+                    <div class="contact-info-column reveal-up">
+                        <span class="section-subtitle">GET IN TOUCH</span>
+                        <h2 class="contact-main-title">Let's Connect and <br>Build Together.</h2>
+                        <p class="contact-narrative">
+                            Whether you have a technical project inquiry, a collaboration opportunity, or a software engineering internship role, I would be glad to connect. Feel free to reach out via email or LinkedIn.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-regular fa-envelope"></i></div>
+                                <div class="method-details">
+                                    <span>Email</span>
+                                    <a href="mailto:hkmistry125@gmail.com">hkmistry125@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="method-details">
+                                    <span>Location</span>
+                                    <span>Gujarat, India</span>
+                                </div>
+                            </div>
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <div class="method-details">
+                                    <span>LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/harsh-mistry-a0329a30b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">Harsh Mistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-column reveal-up">
+                        <form id="contactForm" class="contact-form-card">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="formName">Full Name</label>
+                                    <input type="text" id="formName" name="name" placeholder="Harsh Mistry" required
+                                        autocomplete="name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="formEmail">Email Address</label>
+                                    <input type="email" id="formEmail" name="email" placeholder="hkmistry125@gmail.com"
+                                        required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="formSubject">Subject</label>
+                                    <input type="text" id="formSubject" name="subject" placeholder="Project Inquiry"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="formMessage">Message</label>
+                                    <textarea id="formMessage" name="message" rows="5"
+                                        placeholder="Tell me about your project..." required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" class="btn-primary form-submit-btn">
+                                    <span>Send Message</span>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <span class="copyright">&copy; 2026 Harsh Mistry. All Rights Reserved.</span>
+            <div class="footer-links">
+                <a href="#home">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP CDN for smooth reveals -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
