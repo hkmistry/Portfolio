@@ -211,7 +211,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
                     submitBtn.style.color = '#FFFFFF';
                     submitBtn.style.boxShadow = '0 10px 25px rgba(16, 185, 129, 0.3)';
-                    contactForm.reset();
+                    
+                    // Transition to the success card after a short delay
+                    setTimeout(() => {
+                        const successCard = document.getElementById('contactSuccess');
+                        if (successCard) {
+                            contactForm.style.display = 'none';
+                            successCard.style.display = 'flex';
+                        }
+                    }, 800);
                 } else {
                     throw new Error('Submission flag returned false');
                 }
@@ -236,6 +244,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.style.boxShadow = '';
                 }, 4000);
             });
+        });
+    }
+
+    // Reset Success Card to Form view and implement premium 3D tilt interaction
+    const resetFormBtn = document.getElementById('resetFormBtn');
+    const successCard = document.getElementById('contactSuccess');
+    
+    if (resetFormBtn && contactForm && successCard) {
+        resetFormBtn.addEventListener('click', () => {
+            // Restore default flat card style before hiding
+            successCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            successCard.style.display = 'none';
+            contactForm.style.display = 'flex';
+            contactForm.reset();
+        });
+
+        // 3D Card Hover Tilt Effect
+        successCard.addEventListener('mousemove', (e) => {
+            const rect = successCard.getBoundingClientRect();
+            const x = e.clientX - rect.left; // x coordinate relative to the card
+            const y = e.clientY - rect.top;  // y coordinate relative to the card
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Calculate rotational intensity (tilt angle cap of 10 degrees)
+            const rotateX = -(y - centerY) / 12;
+            const rotateY = (x - centerX) / 12;
+            
+            // Apply 3D matrix transform
+            successCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        // Reset rotation state on mouse leave
+        successCard.addEventListener('mouseleave', () => {
+            successCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
         });
     }
 

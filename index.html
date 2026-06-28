@@ -674,6 +674,46 @@
                                 </button>
                             </div>
                         </form>
+
+                        <!-- Submission Success State Card (Premium 3D Holographic Version) -->
+                        <div id="contactSuccess" class="submission-success-card" style="display: none;">
+                            <!-- Animated SVG Check Icon: Circle draws → Checkmark draws → Rings expand -->
+                            <div class="success-icon-container">
+                                <svg class="success-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Glow filter -->
+                                    <defs>
+                                        <filter id="checkGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                        </filter>
+                                    </defs>
+                                    <!-- Step 1: Double concentric circles draw themselves -->
+                                    <circle class="success-circle-outer" cx="40" cy="40" r="35"
+                                        stroke="#00E5FF" stroke-width="1.8" stroke-linecap="round" filter="url(#checkGlow)"/>
+                                    <circle class="success-circle-inner" cx="40" cy="40" r="29"
+                                        stroke="#00E5FF" stroke-width="1.8" stroke-linecap="round" filter="url(#checkGlow)"/>
+                                    <!-- Step 2: Checkmark draws itself -->
+                                    <polyline class="success-check-draw" points="22,41 34,53 58,27"
+                                        stroke="#00E5FF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#checkGlow)"/>
+                                </svg>
+                                <!-- Step 3: Ripple rings expand after check is drawn (exactly two waves) -->
+                                <div class="check-ring check-ring-1"></div>
+                                <div class="check-ring check-ring-2"></div>
+                            </div>
+                            
+                            <h3 class="success-title">THANK YOU!</h3>
+                            
+                            <div class="success-desc-container">
+                                <p class="success-desc">Your message has been sent successfully.</p>
+                                <p class="success-desc-sub">I appreciate you reaching out. <br>I'll get back to you as soon as possible.</p>
+                            </div>
+                            
+                            <!-- Action button to reset form -->
+                            <button type="button" id="resetFormBtn" class="btn-primary success-reset-btn">
+                                <span>Send Another Message</span>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                        </div>
                     </div>
 
                 </div>
