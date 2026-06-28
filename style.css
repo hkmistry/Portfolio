@@ -1365,6 +1365,19 @@ textarea:focus-visible,
     box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
 }
 
+/* Browser autofill styling overrides to maintain dark-mode harmony */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover, 
+.form-group input:-webkit-autofill:focus,
+.form-group textarea:-webkit-autofill,
+.form-group textarea:-webkit-autofill:hover,
+.form-group textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text-main) !important;
+    -webkit-box-shadow: 0 0 0px 1000px #0c1224 inset !important; /* Matches the dark background card */
+    box-shadow: 0 0 0px 1000px #0c1224 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .form-submit-btn {
     width: 100%;
     justify-content: center;
