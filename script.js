@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const navOverlay = document.getElementById('navOverlay');
     const body = document.body;
 
+    // Suppress ScrollSpy triggers during manual click-triggered smooth scrolls
+    let isClickScrolling = false;
+    let scrollTimeout;
+
     const toggleMenu = (forceClose = false) => {
         if (forceClose || menuBtn.classList.contains('active')) {
             menuBtn.classList.remove('active');
@@ -25,9 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener('click', () => toggleMenu());
     navOverlay.addEventListener('click', () => toggleMenu(true));
 
-    // Close menu drawer when links are selected
+    // Close menu drawer when links are selected and update active states immediately
     document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => toggleMenu(true));
+        link.addEventListener('click', () => {
+            const targetSec = link.getAttribute('data-sec');
+            if (targetSec) {
+                // Set the active class instantly on the clicked item and clear others
+                const navItems = document.querySelectorAll('.nav-item');
+                navItems.forEach(item => {
+                    if (item.getAttribute('data-sec') === targetSec) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Temporarily block ScrollSpy while the smooth scroll transition is active
+                isClickScrolling = true;
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    isClickScrolling = false;
+                }, 1000);
+            }
+            toggleMenu(true);
+        });
     });
 
     // 2. ScrollSpy Integration - Active state highlight on scroll via IntersectionObserver
@@ -41,6 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const spyObserver = new IntersectionObserver((entries) => {
+        // Skip scrollspy updates if we are currently mid-scroll from a navbar click
+        if (isClickScrolling) return;
+
         // Fallback for top scroll zone
         if (window.scrollY < 50) {
             navItems.forEach(item => {
