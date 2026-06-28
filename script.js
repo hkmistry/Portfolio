@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 150);
     }
 
-    // 4. Contact Form Submission mock logic
+    // 4. Production Contact Form Submission (FormSubmit AJAX API integration)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -174,21 +174,59 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = contactForm.querySelector('.form-submit-btn');
             const originalText = submitBtn.querySelector('span').textContent;
             
-            // Visual transition for submission
+            // Visual transition to loading state
             submitBtn.disabled = true;
             submitBtn.querySelector('span').textContent = 'Sending...';
             submitBtn.querySelector('i').className = 'fa-solid fa-circle-notch fa-spin';
             
-            setTimeout(() => {
-                submitBtn.querySelector('span').textContent = 'Message Sent!';
-                submitBtn.querySelector('i').className = 'fa-regular fa-circle-check';
-                submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)'; // Green success state
+            // Capture form values
+            const formData = {
+                name: document.getElementById('formName').value,
+                email: document.getElementById('formEmail').value,
+                subject: document.getElementById('formSubject').value,
+                message: document.getElementById('formMessage').value,
+                _subject: "New Portfolio Message: " + document.getElementById('formSubject').value
+            };
+
+            // Send POST request to FormSubmit AJAX endpoint
+            fetch('https://formsubmit.co/ajax/hkmistry125@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response error');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success === 'true' || data.success === true) {
+                    // Update button UI to green success state
+                    submitBtn.querySelector('span').textContent = 'Message Sent!';
+                    submitBtn.querySelector('i').className = 'fa-regular fa-circle-check';
+                    submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+                    submitBtn.style.color = '#FFFFFF';
+                    submitBtn.style.boxShadow = '0 10px 25px rgba(16, 185, 129, 0.3)';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Submission flag returned false');
+                }
+            })
+            .catch(error => {
+                console.error('Submission failed:', error);
+                // Update button UI to red error state
+                submitBtn.querySelector('span').textContent = 'Error Sending';
+                submitBtn.querySelector('i').className = 'fa-solid fa-circle-exclamation';
+                submitBtn.style.background = 'linear-gradient(135deg, #EF4444, #DC2626)';
                 submitBtn.style.color = '#FFFFFF';
-                submitBtn.style.boxShadow = '0 10px 25px rgba(16, 185, 129, 0.3)';
-                
-                contactForm.reset();
-                
-                // Reset submit button state after 3s
+                submitBtn.style.boxShadow = '0 10px 25px rgba(239, 68, 68, 0.3)';
+            })
+            .finally(() => {
+                // Reset button to default state after 4 seconds
                 setTimeout(() => {
                     submitBtn.disabled = false;
                     submitBtn.querySelector('span').textContent = originalText;
@@ -196,8 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.style.background = '';
                     submitBtn.style.color = '';
                     submitBtn.style.boxShadow = '';
-                }, 3000);
-            }, 1500);
+                }, 4000);
+            });
         });
     }
 
