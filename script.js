@@ -178,6 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorOutline = document.getElementById('cursorOutline');
 
     if (cursorDot && cursorOutline) {
+        const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+        if (isTouchDevice) {
+            cursorDot.style.display = 'none';
+            cursorOutline.style.display = 'none';
+        } else {
             document.documentElement.classList.add('custom-cursor-active');
             let mouseX = 0, mouseY = 0;
             let outlineX = 0, outlineY = 0;
@@ -314,4 +319,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
             attachHoverListeners();
         }
+    }
 });
